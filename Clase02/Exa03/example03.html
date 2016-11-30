@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de for-in</title>
+</head>
+<body>
+
+    <script>
+        /**
+         * Formas de recorrer un arreglo
+         */
+        var diasSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+
+        for (var indice = 0; indice < diasSemana.length; indice++) {
+            console.log(diasSemana[indice]);
+        }
+
+        for (var indice in diasSemana) {
+            console.log("indice: " + indice);
+            console.log("valor: " + diasSemana[indice]);
+        }
+
+        var objeto = {prop1: "uno", prop2: "dos", prop3: "tres", prop4: "cuatro"};
+
+        for (var cualquier_cosa in objeto) {
+            console.log("atributo: " + cualquier_cosa);
+            console.log("valor: " + objeto[cualquier_cosa]);
+        }
+
+        var matriz = [[1,2,3], [4,5,6], [7,8,9]];
+
+        /**
+             0   1   2
+        0 || 1 | 2 | 3
+        1 || 4 | 5 | 6
+        2 || 7 | 8 | 9
+         **/
+
+        console.log(matriz);
+        console.log(matriz[0][1]);
+
+        for (var i = 0; i < matriz.length; i++) {
+            for (var j = 0; j < matriz[i].length; j++) {
+                console.log(matriz[i][j]);
+            }
+        }
+
+        /*
+        1010 = 0*pow(2,5) + 0*pow(2,4) + 1*pow(2,3)+ 0*pow(2,2)+ 1*pow(2,1)+ 0*pow(2,0)
+        10 = 1 * pow(10, 1) + 0 * pow(10,0)
+        */
+    </script>
+</body>
+</html>
