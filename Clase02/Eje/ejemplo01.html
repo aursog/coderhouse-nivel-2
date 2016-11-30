@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio propuesto</title>
+</head>
+<body>
+
+    <script>
+        var diasSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+
+        // Primera parte
+        var dia = prompt("Ingrese el día");
+
+        if (dia == "sabado" || dia == "Sabado") {
+            alert("Es sábado y mi cuerpo lo sabe");
+        }
+
+        // Segunda parte
+        var edad = parseInt(prompt("Ingrese edad"));
+
+        if (edad >= 18 && (dia == "sabado" || dia == "Sabado")) {
+            alert("Un buen lugar para festejar es el pub Dublin");
+        } else if (edad >= 18 && (dia == "domingo" || dia == "Domingo")) {
+            alert("Arrepiente pecador, ve a la catedral");
+        } else if (edad >= 18 && (dia))
+
+        switch (edad) {
+            case 10:
+                alert("Este es un mensaje para un niño");
+                break;
+            case 20:
+                alert("Este es un mensaje para un veinteañero");
+                break;
+            case 30:
+                alert("Este es un mensaje para un treitañero");
+                break;
+            default:
+                alert("Sorry, no estas considerado");
+                break;
+        }
+
+        // Tercera parte
+        for (var index in diasSemana) {
+            if (diasSemana[index] == "Lunes") {
+                alert("Animo es lunes");
+            } else if (diasSemana[index] == "Viernes" && edad >= 18) {
+                alert("Una buena idea es ir al patio bellavista");
+            }
+        }
+    </script>
+
+</body>
+</html>
