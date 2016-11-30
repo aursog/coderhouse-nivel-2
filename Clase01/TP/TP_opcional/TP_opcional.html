@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajo práctico opcional</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // inicializo variables
+        var numero1 = prompt('Ingrese primer numero');
+        var numero2 = prompt('Ingrese segundo numero');
+        var operacion = prompt('Ingrese operación a aplicar');
+
+        // determino operacion y en base a ella realizo acción
+        if (operacion == "+") {
+            alert("Suma = " + (parseInt(numero1) + parseInt(numero2)));
+        }
+
+        if (operacion == "-") {
+            alert("Resta = " + (parseInt(numero1) - parseInt(numero2)));
+        }
+
+        if (operacion == "*") {
+            alert("Multiplicacion = " + (parseInt(numero1) * parseInt(numero2)));
+        }
+
+        if (operacion == "/") {
+            if (numero2 == 0) {
+                alert("No es posible: " + numero1 + " / " + numero2 + ". Error de datos");
+            } else {
+                alert("Division = " + (parseInt(numero1) / parseInt(numero2)));
+            }
+        }
+
+        /**
+         * Preguntas a pensar
+         *
+         *  - Que opciones de mejora tenemos de este código
+         *  - Que pasa si me agregan un espacio en la operación
+         *  - Que pasa si quiero repetir esto varias veces
+         */
+
+    </script>
+</body>
+</html>

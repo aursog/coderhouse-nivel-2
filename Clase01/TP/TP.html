@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajo práctico</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // Defino variables
+        var numero1;
+        var numero2;
+
+        // inicializo variables
+        numero1 = prompt('Ingrese primer numero');
+        numero2 = prompt('Ingrese segundo numero');
+
+        // realizo operaciones
+        alert("Suma = " + (parseInt(numero1) + parseInt(numero2)));
+        alert("Resta = " + (parseInt(numero1) - parseInt(numero2)));
+        alert("Multiplicacion = " + (parseInt(numero1) * parseInt(numero2)));
+
+        // correcto - pero incompleto
+        alert("Division = " + (parseInt(numero1) / parseInt(numero2)));
+
+        // correcto y completo
+        if (numero2 == 0) {
+            alert("No es posible: " + numero1 + " / " + numero2 + ". Error de datos");
+        } else {
+            alert("Division = " + (parseInt(numero1) / parseInt(numero2)));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Let vs Var</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        for (var variable = 0; variable < 10; variable++) {
+            console.log(variable);
+        }
+
+        console.log(variable) // Retorna: 10
+
+        for (let variable2 = 0; variable2 < 10; variable2++) {
+            console.log(variable2);
+        }
+
+        console.log(variable2); // se cae
+    </script>
+
+</body>
+</html>

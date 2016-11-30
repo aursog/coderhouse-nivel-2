@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ambito de una variable</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var variableGlobal = "Yo soy una variable global"
+
+        function funcioncita() {
+            var variableLocal = "Yo soy una variable local"
+
+            otraGlobal = "Yo también soy una variable global"
+        }
+
+        console.log(variableGlobal)
+        //console.log(otraGlobal) // tambien falla debido a que la definición de esta variable es dentro de la función
+
+        funcioncita()
+        console.log(otraGlobal)
+
+        //console.log(variableLocal) // arroja error debido a que variable local no está definida
+
+        /**
+         * Ejemplo 2
+         *
+         * Colisiones de nombres
+         */
+
+        variable = "Otra global"
+
+        function fx() {
+            // La variable local tiene dominio sobre su función
+            var variable = "Local";
+
+            console.log(variable);
+        }
+
+        console.log(variable) // resultado: Otra global
+        fx() // resultado: Local
+        console.log(variable) // resultado: Otra global
+    </script>
+</body>
+</html>
