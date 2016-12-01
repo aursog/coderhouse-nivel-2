@@ -12,20 +12,26 @@
         // Primera parte
         var dia = prompt("Ingrese el día");
 
-        if (dia == "sabado" || dia == "Sabado") {
+        if (dia == "sabado" || dia == diasSemana[5]) {
             alert("Es sábado y mi cuerpo lo sabe");
         }
 
         // Segunda parte
         var edad = parseInt(prompt("Ingrese edad"));
 
-        if (edad >= 18 && (dia == "sabado" || dia == "Sabado")) {
+        if (edad >= 18 && (dia == diasSemana[5] || dia == "sabado")) {
             alert("Un buen lugar para festejar es el pub Dublin");
         } else if (edad >= 18 && (dia == "domingo" || dia == "Domingo")) {
-            alert("Arrepiente pecador, ve a la catedral");
-        } else if (edad >= 18 && (dia))
+                alert("Arrepiente pecador, ve a la catedral");
+        }
 
         switch (edad) {
+            /*case "SABADO":
+            case "sabado":
+            case "sábado":
+            case "Sabado":
+                //ejecute algo acá
+                break;*/
             case 10:
                 alert("Este es un mensaje para un niño");
                 break;

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de break y continue</title>
+</head>
+<body>
+
+    <script>
+        for (var i = 0; i < 100; i++) {
+            if (i == 10) {
+                break;
+            }
+        }
+
+        alert("valor i: " + i);
+
+        for (var j = 0; j < 10; j++) {
+            if (j == 5) {
+                continue;
+            }
+
+            console.log(j);
+        }
+
+        alert("valor j: " + j);
+    </script>
+</body>
+</html>
