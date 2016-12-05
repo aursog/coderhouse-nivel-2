@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de funcion sin retorn</title>
+</head>
+<body>
+
+    <div id="formulario"></div>
+
+    <script>
+        function creaFormulario() {
+            var form = document.createElement("form");
+
+            var label = document.createElement("label");
+            label.setAttribute("for", "nombre");
+            label.innerHTML = "Nombre: ";
+            form.appendChild(label);
+
+            var input = document.createElement("input");
+            input.setAttribute("name", "nombre");
+            input.setAttribute("type", "text");
+
+            form.appendChild(input);
+
+            document.getElementById("formulario").appendChild(form);
+        }
+
+        creaFormulario();
+    </script>
+</body>
+</html>

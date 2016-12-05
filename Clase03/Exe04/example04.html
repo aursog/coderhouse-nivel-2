@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de argumentos</title>
+</head>
+<body>
+
+    <script>
+        function funcionSuma(numero1, numero2) {
+            return numero1 + numero2;
+        }
+
+        function funcionResta(numero1, numero2) {
+            return numero1 - numero2;
+        }
+
+        function funcionSinReturn() {
+            var variable = "Hola";
+            variable += " mundo";
+
+            alert(variable);
+        }
+
+        alert(funcionSuma(2, 3)); // 5
+
+        funcionSinReturn();
+
+        var resultadoSuma = funcionSuma(10, 20);
+        alert(resultadoSuma);
+
+        // Importa el orden de los parámetros
+        funcionSuma("hola", "mundo"); // holamundo
+        funcionSuma("mundo", "hola"); // mundohola
+
+        var numero1 = 5;
+        var numero2 = 10;
+
+        funcionSuma(numero1, numero2);
+
+        var lala = 10;
+        var lolo = 20;
+        funcionSuma(lala, lolo);
+
+
+        alert(funcionSuma(2, 3) + funcionSuma(4,5));
+    </script>
+
+</body>
+</html>

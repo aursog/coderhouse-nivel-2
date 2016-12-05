@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de retornos</title>
+</head>
+<body>
+
+    <script>
+        function funcionEjemplo1(numero1) {
+            return numero1;
+        }
+
+        function funcionEjemplo2(numero1, numero2) {
+            var resultado = numero1 + numero2
+            return resultado;
+        }
+
+        function funcionEjemplo3(numero1, numero2){
+            return funcionEjemplo1(numero1) + funcionEjemplo2(numero1, numero2)
+        }
+
+        console.log(funcionEjemplo3(4,5));
+
+        function funcionObjeto(atributo) {
+            return {
+                nombre: "Pepe",
+                apellido: "Perez",
+                edad: atributo
+            }
+        }
+
+        var atributo = 20;
+        funcionObjeto(atributo);
+
+        function retornoBooleano() {
+            return true // return false;
+        }
+    </script>
+
+</body>
+</html>

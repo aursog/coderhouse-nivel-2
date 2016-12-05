@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo self-invoking</title>
+</head>
+<body>
+    <script>
+        var numero = prompt("Data");
+
+        (function (numero1, numero2) {
+            alert(numero1);
+        })(numero,5);
+
+    </script>
+</body>
+</html>
