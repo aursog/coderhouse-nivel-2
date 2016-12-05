@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo variable local y global</title>
+</head>
+<body>
+
+    <script>
+        var global = "Hola mundo";
+        const PI = 3;
+
+        function funcion() {
+            var local = "Soy local";
+            global = "Ahora cambie";
+            otraGlobal = "Otra variable global";
+        }
+
+        alert(global);
+        funcion();
+        alert(global);
+        alert(otraGlobal);
+    </script>
+</body>
+</html>
