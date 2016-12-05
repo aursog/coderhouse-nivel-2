@@ -11,9 +11,9 @@
         var diaSemana = prompt("Ingrese un día de la semana").toLowerCase();
 
         for (index in diasSemana) {
-            if (diasSemana[i] == diaSemana) {
-                if (diasSemana != "sabado" || diasSemana != "domingo") {
-                    alert("Es dia es hábil");
+            if (diasSemana[index] == diaSemana) {
+                if (diaSemana != "sabado" && diaSemana != "domingo") {
+                    alert("El dia es hábil");
                 } else {
                     alert("El día es fin de semana");
                 }
