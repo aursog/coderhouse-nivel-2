@@ -8,8 +8,38 @@
     <script>
         // Parte 1
         function pedirNombre() {
-            
+            var nombre = prompt("Ingrese nombre");
+            console.log(nombre);
         }
+
+        function habilInhabil(tipo) {
+            if (tipo == "habil") {
+                alert("Habiles: Lunes, Martes, Miercoles, Jueves, Viernes");
+            } else {
+                alert("Fin de semana: Sábado, Domingo");
+            }
+        }
+
+        function habilInhabilArreglo(tipo) {
+            //var diasHabiles = ["lunes", "martes", "miercoles", "jueves", "viernes"];
+            //var fds = ["sabado", "domingo"];
+            var diasSemana = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
+
+            if (tipo == "habil") {
+                for (var i = 0; i < 5; i++) {
+                    console.log(diasSemana[i]);
+                }
+            } else {
+                console.log(diasSemana[5]);
+                console.log(diasSemana[6]);
+            }
+        }
+
+        pedirNombre();
+        habilInhabil("habil");
+        habilInhabil("inhabil");
+        habilInhabilArreglo("habil");
+        habilInhabilArreglo("inhabil");
     </script>
 </body>
 </html>
