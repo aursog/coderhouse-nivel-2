@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Auto</title>
+</head>
+<body>
+
+    <script>
+        function Auto() {
+            this.color = "rojo";
+            this.modelo = "488 GT";
+            this.patente = "MMLL22";
+            this.marca = "Ferrari";
+            this.velocidad = 0;
+            this.velocidad_maxima = 320;
+        }
+
+        Auto.prototype.encender = function() {
+            console.log("Bruuummmm!!!!.... tracatracatracatraca");
+        }
+
+        Auto.prototype.acelerar = function() {
+            console.log("Acelerando -.- ");
+
+            while(this.velocidad != this.velocidad_maxima) {
+                this.velocidad++;
+            }
+
+            console.log("YUJU \\o/ " + this.velocidad);
+        }
+
+        Auto.prototype.velocidadActual = function() {
+            return this.velocidad;
+        }
+
+        Auto.prototype.frenar = function() {
+            console.log("Frenando");
+            this.velocidad = 0;
+        }
+
+        Auto.prototype.apagar = function() {
+            console.log("Pip pip.... brussss");
+        }
+
+        var mi_auto = new Auto();
+
+        console.log(mi_auto.encender());
+        console.log(mi_auto.velocidadActual());
+        console.log(mi_auto.acelerar());
+        console.log(mi_auto.velocidadActual());
+        console.log(mi_auto.frenar());
+        console.log(mi_auto.apagar());
+    </script>
+
+</body>
+</html>

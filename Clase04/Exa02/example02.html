@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio de ejemplo 1</title>
+</head>
+<body>
+
+    <div id="super-ficha">
+
+    </div>
+
+    <script>
+        // Ingresar por prompt los datos de dos persona.
+        // nombre, apellido, telefono, edad, estatura
+        // mostrar por consola los datos del objeto
+
+        function Persona() {
+            this.nombre;
+            this.apellido;
+            this.telefono;
+            this.edad;
+            this.estatura;
+        }
+
+        Persona.prototype = Persona;
+        Persona.prototype.getNombreCompleto = function() {
+            return this.nombre + " " + this.apellido;
+        };
+
+        Persona.prototype.printFicha = function() {
+            var ficha = document.createElement("div");
+            ficha.setAttribute("id", "ficha");
+
+            var capaNombre = document.createElement("div");
+            capaNombre.setAttribute("id", "nombre");
+            capaNombre.innerText = this.getNombreCompleto();
+
+            ficha.appendChild(capaNombre);
+            document.getElementById("super-ficha").appendChild(ficha);
+        };
+
+        var persona1 = new Persona();
+
+        var inputNombre = prompt("Ingrese nombre");
+        var inputApellido = prompt("Ingrese apellido");
+        var inputTelefono = prompt("Ingrese telefono");
+        var inputEdad = prompt("Ingrese edad");
+        var inputEstatura = prompt("Ingrese estatura");
+
+        persona1.nombre = inputNombre;
+        persona1.apellido = inputApellido;
+        persona1.telefono = inputTelefono;
+        persona1.edad = inputEdad;
+        persona1.estatura = inputEstatura;
+
+        console.log(persona1.getNombreCompleto());
+        persona1.printFicha();
+
+    </script>
+</body>
+</html>

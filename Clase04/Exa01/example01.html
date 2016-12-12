@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo objeto</title>
+</head>
+<body>
+
+    <script>
+        // Definición de objeto como funcion
+        // clase y objeto van de la mano
+
+        // Clase
+        function Persona(edad, nombre, apellido, peso, estatura) {
+            this.edad = edad;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.peso = peso;
+            this.estatura = estatura;
+        }
+
+        var juanito = new Persona(
+                21, "Juan", "Perez", 90, 190
+        );
+
+        var persona2 = new Persona(
+                35, "Pedro", "Gonzalez", 200, 170
+        );
+
+        function Animal() {
+            this.tipo;
+            this.patas;
+            this.peludo; // si o no
+        }
+
+        Animal.prototype = Animal
+
+        Animal.prototype.setPatas = function(patas) {
+            this.patas = patas;
+        };
+
+        var gato = new Animal();
+        gato.tipo = "felino";
+        gato.setPatas(4);
+        gato.peludo = "mucho";
+
+
+        // Segunda forma de crear un objeto
+        // a traves de {}
+        var ClassObjeto = {
+            forma: "",
+            tamanho: "",
+            peso: "",
+            material: "",
+        };
+
+        ClassObjeto.prototype = ClassObjeto;
+        ClassObjeto.prototype.getForma = function() {}
+
+
+    </script>
+</body>
+</html>
