@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajo práctico 03</title>
+</head>
+<body>
+
+    <script>
+        var numero1 = parseInt(prompt("Ingrese número 1"));
+        var numero2 = parseInt(prompt("Ingrese número 2"));
+        var operacion = prompt("Ingrese operación a realizar");
+
+        var resultado;
+
+        switch (operacion) {
+            case "+":
+                resultado = sumar(numero1, numero2);
+                break;
+            case "-":
+                resultado = resta(numero1, numero2);
+                break;
+            case "*":
+                resultado = multiplicacion(numero1, numero2);
+                break;
+            case "/":
+                resultado = division(numero1, numero2);
+                break;
+            default:
+                alert("Operación no reconocida");
+                break;
+        }
+
+        alert("El resultado de la operación: " + operacion + " es: " + resultado);
+
+        function sumar(numero1, numero2) {
+            return numero1 + numero2;
+        }
+
+        function resta(numero1, numero2) {
+            return numero1 - numero2;
+        }
+
+        function multiplicacion(numero1, numero2) {
+            return numero1 * numero2;
+        }
+
+        function division(numero1, numero2) {
+            if (numero2 == 0) {
+                alert("No es posible dividir por 0");
+                return 0
+            }
+
+            return numero1 / numero2;
+        }
+    </script>
+</body>
+</html>

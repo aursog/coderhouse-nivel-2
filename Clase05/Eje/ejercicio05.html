@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 05</title>
+</head>
+<body>
+
+    <script>
+        function Auto(patente, peso) {
+            this.patente = patente;
+            this.peso = peso;
+        }
+
+        Auto.prototype.getPeso = function() {
+            return this.peso;
+        }
+
+        Auto.prototype.getPatente = function() {
+            return this.patente;
+        }
+
+        function Camion() {
+            this.pesoMaximo = 1000;
+            this.pesoOcupado = 0;
+            this.autos = [];
+        }
+
+        Camion.prototype.validarPatente = function(auto) {
+            if (this.autos.length) {
+                var estaPatente = this.autos.find(function(autoArriba) {
+                    return autoArriba.getPatente() == auto.getPatente()
+                });
+
+                return estaPatente === undefined;
+            }
+
+            return true;
+        }
+
+        Camion.prototype.validarPeso = function(auto) {
+            var pesoOcupado = this.pesoOcupado + auto.getPeso()
+
+            return pesoOcupado < this.pesoMaximo;
+        }
+
+        Camion.prototype.subirAutos = function(auto) {
+            if (this.validarPatente(auto) && this.validarPeso(auto)) {
+                console.log("Subiendo auto");
+                this.autos.push(auto);
+                this.pesoOcupado += auto.getPeso();
+                return true;
+            } else {
+                console.log("No puedo subir más autos");
+                return false;
+            }
+        }
+
+        Camion.prototype.getPatentes = function() {
+            this.autos.forEach(function(auto, index) {
+                console.log("Patente auto " + index + ": " + auto.getPatente());
+            })
+        }
+
+        var camion = new Camion();
+
+        for (i = 0; i < 10; i++) {
+            var patente = "BBCC0" + i;
+            var auto = new Auto(patente, 10);
+            var result = camion.subirAutos(auto);
+
+            if (!result) {
+                break;
+            }
+        }
+
+        console.log(camion.getPatentes())
+    </script>
+
+</body>
+</html>
