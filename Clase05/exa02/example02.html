@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Métodos de array</title>
+</head>
+<body>
+
+    <script>
+        var arreglo = [1, 2, 3, 4, 5, 6, 7];
+
+        // me retorna los datos del arreglo en un string, separados por comas
+        arreglo.toString(); // "1,2,3,4,5,6,7"
+
+        arreglo.push(8); // agrega un elemento al arreglo, al final de este
+        arreglo.pop() // retira del arreglo el último elemento
+
+        // me transforma el arreglo en un string, separando los elementos según el caracter
+        // determinado en el parámetro
+        arreglo.join(";");
+
+        // ordena el arreglo de acuerdo al valor unicode del elemento
+        //ej: [2, 3, 5, 1, 100] ==> [1, 100, 2, 3, 5]
+        arreglo.sort();
+
+        // para ordenar de otra forma puedo pasar una función
+        arreglo.sort(function(a,b) { return a - b}); // ordena ascendente
+        arreglo.sort(function(a,b) { return b - a}); // ordena descendente
+
+        // invierte el orden de un arreglo
+        arreglo.reverse();
+
+        // me permite concatenar uno o más arreglos
+        arreglo.concat([10, 11, 12]);
+
+        // me devuelve una copia de una parte del arreglo
+        arreglo.slice(1, 2);
+        // slice(inicio, fin)
+
+        // agrega o elimina elementos de un arreglo desde la posición determinada y la cantidad de elementos
+        arreglo.splice(1, 0, "cuatro", "cinco");
+        // (posicion, cantidad, elementos...)
+
+        // me permite recorrer el arreglo a través de una función en donde el primer parámetro
+        // es el elemento y el segundo el índice del elemento
+        arreglo.forEach(function(elemento, indice) {
+
+        });
+
+        // me encuentra la primera incidencia que cumpla con la prueba definida
+        // itera sobre los elementos del arreglo y este es el parámetro que recibe la función
+        arreglo.find(function(elemento) { return elemento > 10 });
+
+        // similar a find, pero retorna todos los elementos que cumplan con la prueba
+        arreglo.filter(function(elemento) {return elemento > 10});
+    </script>
+</body>
+</html>

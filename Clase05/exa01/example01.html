@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Métodos de String</title>
+</head>
+<body>
+
+    <script>
+        var cadena = "Hola mundo";
+
+        //largo
+        console.log(cadena.length);
+
+        // primera incidencia del caracter "o" dentro del string, comenzando desde el principio
+        // esta función devuelve la posición
+        cadena.indexOf("o");
+
+        // primera incidencia del caracter "o" dentro del string, comenzando desde el final
+        // esta función devuelve la posición, contando desde el inicio
+        cadena.lastIndexOf("o");
+
+        // me devuelve el caracter en la posición indicada
+        cadena.charAt(0);
+
+        cadena.toUpperCase(); // lleva a mayúsculas toda la cadena
+        cadena.toLowerCase(); // leva a minusculas toda la cadena
+
+        cadena.substr(1, 2); // me corta la cadena desde la posición inicio, hasta la cantidad
+        // cadena.substr(inicio, cantidad);
+
+        // me agrega el o los string que defina a la cadena original
+        cadena.concat("mundo");
+
+        // me divide y transforma la cadena en un arreglo según el parámetro de la función
+        // llamado también caracter delimitador
+        cadena.split(",");
+
+        // ejemplo de función que deja en mayúsculas la primera letra del string
+        function ucFirst(cadena) {
+            var tmp_cadena = cadena.toLowerCase();
+            var letra = tmp_cadena.charAt(0).toUpperCase()
+            return letra + tmp_cadena.substr(1);
+        }
+
+        var cadenita = "HOLA MUNDO";
+        console.log(ucFirst(cadenita));
+
+    </script>
+
+</body>
+</html>

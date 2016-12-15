@@ -27,7 +27,9 @@
         }
 
         Camion.prototype.validarPatente = function(auto) {
-            if (this.autos.length) {
+            // si tamanho es 0 --> if retorna falso
+            // si tamanho es != 0 -> if retorna true
+            if (this.autos.length)  {
                 var estaPatente = this.autos.find(function(autoArriba) {
                     return autoArriba.getPatente() == auto.getPatente()
                 });
@@ -45,6 +47,8 @@
         }
 
         Camion.prototype.subirAutos = function(auto) {
+            // || OR Lógico
+            // && AND Lógico
             if (this.validarPatente(auto) && this.validarPeso(auto)) {
                 console.log("Subiendo auto");
                 this.autos.push(auto);
@@ -59,7 +63,23 @@
         Camion.prototype.getPatentes = function() {
             this.autos.forEach(function(auto, index) {
                 console.log("Patente auto " + index + ": " + auto.getPatente());
-            })
+            });
+
+            /*var largo = this.autos.length;
+            var j = 0;
+
+            for (var j = 0; j < largo; j++) {
+                console.log("Patente auto: " + this.autos[j].getPatente());
+            }
+
+            while(j < largo) {
+                console.log("Patente: " + this.autos[j].getPatente());
+                j++;
+            }
+
+            for (this.autos in index) {
+                console.log("Patente: " + this.autos[index].getPatente());
+            }*/
         }
 
         var camion = new Camion();
