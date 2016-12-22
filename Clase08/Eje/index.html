@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>M&oacute;dulo Diario</title>
+</head>
+<body>
+
+    <head>
+        <h1>Bienvenidos a Mi Diario</h1>
+    </head>
+
+    <div class="formulario" data-js="formNoticia">
+        <form method="post">
+            <fieldset>
+                <legend>Creaci&oacute;n de noticias</legend>
+
+                <div>
+                    <label for="titulo">Titulo</label>
+                    <input type="text" name="titulo" id="titulo" maxlength="20" />
+                </div>
+
+                <div>
+                    <label for="descripcion">Descripci&oacute;n</label>
+                    <textarea name="descripcion" id="descripcion"></textarea>
+                </div>
+
+                <div>
+                    <label for="foto">Imagen</label>
+                    <input type="text" name="foto" id="foto" />
+                </div>
+
+                <div>
+                    <input type="submit" value="CrearNoticia" data-id="crearNoticia" />
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="js/moduloDiario.js"></script>
+    <script src="js/integracion.js"></script>
+    <script src="js/formulario.js"></script>
+</body>
+</html>
