@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div class="formulario">
+        <form id="form-noticia">
+            <fieldset>
+                <legend>Otra vez el diario</legend>
+
+                <div class="input-field">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" id="titulo" name="titulo" />
+                </div>
+
+                <div class="input-field">
+                    <label for="cuerpo">Cuerpo noticia</label>
+                    <textarea id="cuerpo" name="cuerpo" cols="20" rows="5"></textarea>
+                </div>
+
+                <div class="input-field">
+                    <input type="submit" value="Enviar" />
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="resultado">
+        <div class="noticia" style="display:none">
+            <h1></h1>
+            <div class="cuerpo"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+    <script type="text/javascript">
+        (function() {
+            var Diario = {};
+            var dataStorage = [];
+
+            Diario.saveNoticia = function(titulo, cuerpo) {
+                var news = {
+                    titulo: titulo,
+                    cuerpo: cuerpo
+                };
+
+                dataStorage.push(news);
+            };
+
+            Diario.saveLocalStorage = function() {
+                localStorage.setItem('data', JSON.stringify(dataStorage));
+            };
+
+            Diario.getLocalStorage = function() {
+                return JSON.parse(localStorage.getItem('data'));
+            };
+
+            window.Diario = Diario;
+        })();
+
+
+        $('#form-noticia').on('submit', function(event) {
+            event.preventDefault();
+            Diario.saveNoticia($('#titulo').val(), $('#cuerpo').val());
+            Diario.saveLocalStorage();
+
+            var div = $('.resultado .noticia').eq(0).clone();
+            div.children().eq(0).text($('#titulo').val());
+            div.children().eq(1).text($('#cuerpo').val());
+            div.css('display', 'block');
+
+            $('.resultado').append(div);
+        });
+    </script>
+</body>
+</html>

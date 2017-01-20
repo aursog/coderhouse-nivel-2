@@ -1,0 +1,57 @@
+aside {
+    border-right: 1px solid #cccccc;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+ul li {
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 400;
+    border-bottom: 1px solid #cccccc;
+    cursor: pointer;
+}
+
+.product {
+    border: 1px solid red;
+    margin-left: 5px;
+    height: 300px;
+    padding: 10px;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.product > .imagen {
+    border: 1px solid blue;
+    margin-bottom: 10px;
+    height: 150px;
+}
+
+.product > .data {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.price {
+    text-align: right;
+    color: darkred;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.imagen img {
+    width: 80%;
+}
+
+.paginator {
+    margin-top: 25px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.paginator span {
+    border: 1px solid #cccccc;
+    padding: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}

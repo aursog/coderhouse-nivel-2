@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test SlideUp / SlideDown</title>
+</head>
+<body>
+    <div class="slider">
+        <div class="click"><button type="button" id="button">Click me!</button></div>
+        <div class="container" id="toggleSlider">
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla luctus urna, vitae imperdiet lectus fermentum non. Nam at est vitae velit dapibus aliquam quis sed felis. Proin gravida malesuada risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent mattis neque quis lectus pulvinar porta. Nullam feugiat sem quis nunc posuere facilisis. Vestibulum a fringilla nisl. Sed ac tortor a ligula sagittis sollicitudin. Donec luctus scelerisque lectus, nec placerat mi varius a. Phasellus vehicula lacinia neque quis efficitur. Praesent suscipit erat ut nisi pellentesque, at condimentum lectus mollis.
+            </p>
+            <p>
+            Duis pharetra dolor at velit porta varius. Proin vehicula augue a tristique porta. Maecenas accumsan ex eu enim interdum iaculis. Nulla mi sem, luctus eu iaculis nec, molestie ut sem. Maecenas interdum sollicitudin libero, at consectetur nulla hendrerit id. Ut finibus, ligula vel faucibus viverra, ex odio viverra dolor, ac vulputate massa risus vel ligula. Duis eros tellus, vulputate a lorem vitae, iaculis volutpat nisi. Ut vel velit nisl. Quisque eget lectus urna. Nulla ut velit eget sem venenatis suscipit vel non massa. In hac habitasse platea dictumst. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices nisi ut augue semper accumsan.
+            </p>
+            <p>
+            Praesent dolor lorem, dapibus dapibus nisi non, condimentum auctor tortor. Duis dignissim enim ante, in tempus augue porta eget. Nullam tortor est, egestas sit amet faucibus vel, venenatis nec eros. Donec arcu justo, pellentesque vel mi viverra, condimentum iaculis dolor. Aliquam eget mattis turpis, id rutrum ligula. Cras faucibus eros nec condimentum laoreet. Morbi mollis commodo leo ac commodo. Duis et ligula nec nibh dignissim malesuada eu sed neque. Quisque eget pharetra magna. Integer eget risus tortor. Duis pharetra nibh diam.
+            </p>
+            <p>
+            Nam hendrerit dui neque. Nullam diam est, scelerisque et sapien id, imperdiet suscipit nibh. Suspendisse potenti. Quisque facilisis non risus ut accumsan. Aliquam sed tincidunt magna. Sed vitae aliquet est, at fringilla ipsum. Nulla ornare dolor in massa vulputate luctus. Proin molestie mattis ornare. Curabitur nec facilisis turpis. Mauris quis ante turpis. Maecenas rhoncus risus at ante porta fringilla. Quisque vel sollicitudin est.
+            </p>
+            <p>
+            Ut eget tortor quis odio pretium tincidunt in eget ligula. In tempus accumsan nulla ac pretium. Etiam eu turpis a justo fermentum auctor. Vivamus lobortis odio sit amet ante laoreet, at facilisis tellus fermentum. Quisque ac ante vestibulum, ultrices metus id, dapibus neque. Sed dignissim leo id sapien tempor, non tincidunt sem imperdiet. Donec pulvinar urna vitae urna accumsan rutrum. Nulla feugiat augue ac tempus feugiat. Ut dignissim dignissim ante ac sodales.
+            </p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        $('#button').click(function() {
+            $('#toggleSlider').slideToggle();
+        });
+
+        /*var button = document.querySelector('#button');
+        button.addEventListener('click', function() {
+            var elementSlider = document.querySelector('#toggleSlider');
+            elementSlider.style.animationDelay = 3000;
+
+            if (elementSlider.style.display != "none") {
+                elementSlider.style.display = "none";
+            } else {
+                elementSlider.style.display = "block";
+            }
+        });*/
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Ejemplo</title>
+</head>
+<body>
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        function respuestaApi() {
+            return $.ajax({
+                complete: function () {
+                    alert("Request completo");
+                },
+                url: "https://api.mercadolibre.com/countries",
+                method: 'post', // post, put, delete
+                dataType: 'json', // text, html, xml
+                success: function (response) {
+                    return response
+                },
+                error: function (jqxhr, status, errorThrown) {
+                    console.log(status);
+                    console.log(jqxhr);
+                    console.log(errorThrown);
+                }
+            });
+        }
+
+        respuestaApi().then(function(response) {
+            console.log(response);
+        });
+    </script>
+</body>
+</html>

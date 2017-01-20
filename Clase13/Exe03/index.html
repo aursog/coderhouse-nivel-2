@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo pr&aacute;ctico</title>
+</head>
+<body>
+    <style>
+        .table-content .image {
+            border: 1px solid red;
+            width: 15%;
+            float: left;
+        }
+        .table-content .data {
+            border: 1px solid blue;
+            width: 40%;
+            float: left;
+            margin-left: 15px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .cell {
+            display: none;
+        }
+
+        .image img {
+            width: 100%;
+        }
+
+    </style>
+
+    <div class="container">
+        <div class="table-content"></div>
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        function mercadolibre() {
+            return $.ajax({
+                url: "https://api.mercadolibre.com/sites/MLC/search",
+                data: {category: "MLC1743", limit: 10},
+                method: "get",
+                dataType: "json",
+                success: function(response) {
+                    return response;
+                }
+            });
+        }
+
+        // Esto se trabajó con una promesa (promise)
+        $.ajax({
+            dataType: 'html',
+            url: 'template.html',
+            success: function(response) {
+                $('.table-content').append(response);
+
+                mercadolibre().then(function(results) {
+                    results.results.forEach(function(result) {
+                        var cell = $('.cell').eq(0).clone();
+                        cell.children().find('img').attr('src', result.thumbnail);
+                        cell.children().find('.title').text(result.title);
+                        cell.children().find('.url').html("<a href='" + result.permalink + "' target='_blank'>Publicaci&oacute;n</a>");
+                        cell.children().find('.price').text("$" + result.price);
+                        cell.css('display', 'block');
+
+                        $('.table-content').append(cell);
+                    }, function(lala, error, errorThrow) {
+
+                    });
+                })
+            }
+        });
+
+        $.ajax({
+            dataType: 'html',
+            url: 'template.html',
+            success: function(successData) {
+                $.ajax({
+                    url: "https://api.mercadolibre.com/sites/MLC/search",
+                    data: {category: "MLC1743", limit: 10},
+                    method: "get",
+                    dataType: "json",
+                    success: function(response) {
+                        response.results.forEach(function(result) {
+                            var cell = $('.cell').eq(0).clone();
+                            cell.children().find('img').attr('src', result.thumbnail);
+                            cell.children().find('.title').text(result.title);
+                            cell.children().find('.url').html("<a href='" + result.permalink + "' target='_blank'>Publicaci&oacute;n</a>");
+                            cell.children().find('.price').text("$" + result.price);
+                            cell.css('display', 'block');
+
+                            $('.table-content').append(cell);
+                    }
+                });
+            }
+        })
+    </script>
+</body>
+</html>

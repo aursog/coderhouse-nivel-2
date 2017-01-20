@@ -87,5 +87,5 @@
         noticias = arrNoticia;
     }
 
-    exports.Diario = diario;
+    exports.Diario = diario; // window.Diario = diario
 })(window);
