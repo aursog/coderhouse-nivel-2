@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mantenedor de usuarios - Javascript</title>
+
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+    <head>
+        <h1>Mantenedor de usuarios</h1>
+    </head>
+
+    <section class="formulario">
+        <form name="crear-user" class="crear-user">
+            <fieldset>
+                <legend>Formulario de creaci&oacute;n de usuario</legend>
+
+                <div class="row">
+                    <div class="label">
+                        <div class="label-input">
+                            <label for="nombre">Nombre completo</label>
+                        </div>
+                        <div class="label-input">
+                            <label for="rut">RUT</label>
+                        </div>
+                        <div class="label-input">
+                            <label for="fnac">Fecha nacimiento</label>
+                        </div>
+                        <div class="label-input">
+                            <label for="username">Nombre de usuario</label>
+                        </div>
+                        <div class="label-input">
+                            <label for="passwd">Contrase&ntilde;a</label>
+                        </div>
+                    </div>
+                    <div class="inputs">
+                        <div class="div-input">
+                            <input type="text" name="nombre" id="nombre" class="input-text" placeholder="Nombre persona" />
+                        </div>
+                        <div class="div-input">
+                            <input type="text" name="rut" id="rut" class="input-text" placeholder="Rut persona"/>
+                        </div>
+                        <div class="div-input">
+                            <input type="text" name="fnac" id="fnac" class="input-text" placeholder="Fecha de nacimiento" />
+                        </div>
+                        <div class="div-input">
+                            <input type="text" name="username" id="username" class="input-text" placeholder="Nombre de usuario" />
+                        </div>
+                        <div class="div-input">
+                            <input type="password" name="passwd" id="passwd" class="input-text" placeholder="Password usuario" />
+                        </div>
+                        <div class="div-input">
+                            <input type="submit" name='submitButton' id="envio-datos" value="Crear usuario" />
+                            &nbsp;&nbsp;
+                            <button name='editButton' id="editar-datos" style="display:none">Editar usuario</button>
+                            &nbsp;&nbsp;
+                            <button id="reset-form">Limpiar</button>
+                        </div>
+                    </div>
+
+                    <div class="clear"></div>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    <section class="table">
+        <div class="div-table">
+            <div class="table-header">
+                <div class="th">Nombre persona</div>
+                <div class="th">Nombre de usuario</div>
+                <div class="th">RUT</div>
+                <div class="th">Fecha de creaci&oacute;n</div>
+                <div class="th">Opciones</div>
+                <div class="clear"></div>
+            </div>
+            <div class="table-body"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="js/persona.js"></script>
+    <script type="text/javascript" src="js/usuario.js"></script>
+    <script type="text/javascript" src="js/mantenedor-formulario.js"></script>
+    <script type="text/javascript" src="js/mantenedor-usuarios.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
