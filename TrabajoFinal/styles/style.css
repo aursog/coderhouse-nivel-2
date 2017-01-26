@@ -1,0 +1,97 @@
+.result {
+    border: 1px solid #ccc;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius: 10px;
+    height: 400px;
+    width: 60%;
+    margin-left: 18%;
+}
+
+.vote {
+    text-align: center;
+    width: 60%;
+    margin-left: 18%;
+    margin-top: 10px;
+    height: 100px;
+}
+
+.searching {
+    margin-left: 18%;
+    margin-bottom: 10px;
+}
+
+.searching input {
+    font-size: 25px;
+}
+
+.searching button {
+    padding: 7px;
+    margin-top: -10px;
+    top: -3px;
+    position: relative;
+    font-size: 16px;
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+}
+
+.negative-vote, .positive-vote {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    margin-left: 27%;
+}
+
+.negative-vote {
+    border: 1px solid palevioletred;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background: url('https://cdn0.iconfinder.com/data/icons/superuser-web-kit-thin/512/686916-like_thumb_up_thumbup_agree_admit_yes-512.png') no-repeat;
+    -webkit-background-size: 90%;
+    background-size: 90%;
+    background-position-x: 5px;
+    cursor: pointer;
+    background-color: palevioletred;
+}
+
+.positive-vote {
+    border: 1px solid lightblue;
+    background: url('https://cdn0.iconfinder.com/data/icons/superuser-web-kit-thin/512/686916-like_thumb_up_thumbup_agree_admit_yes-512.png') no-repeat;
+    -webkit-background-size: 90%;
+    background-size: 90%;
+    background-position-x: 5px;
+    cursor: pointer;
+    background-color: lightblue;
+}
+
+.empty-results {
+    position: relative;
+    font-size: 30px;
+    color: #888;
+    top: 35%;
+    left: 28%;
+}
+
+.loading {
+    display: none;
+    position: relative;
+    left: 15%;
+}
+
+.content-result {
+    position: relative;
+    height: 100%;
+    z-index: 10;
+    display: none;
+    top: -24%;
+    left: 22%;
+}

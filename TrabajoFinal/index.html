@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <title>Trabajo Final - Tinder</title>
 
-    <link rel="stylesheet"
+    <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
-    <div id="api-result" class="content">
-        <div class="image">
-            <img src="https://i.scdn.co/image/54a57d5cd1f917a9e475ef67a54b0c03488821b4" alt="Mile Davis" />
+    <header>
+        <h1>Mi aplicaci&oacute;n tipo Tinder - versi&oacute;n musical</h1>
+    </header>
+
+    <section class="principal-content">
+        <div class="searching">
+            <input type="text" name="artist" id="artist" class="artist-input" />
+            <button type="button" id="search-button">Buscar</button>
         </div>
-        <div class="details"></div>
-            <div class="title">Mile Davis</div>
+
+        <div class="result">
+            <div class="empty-results">
+                <img src="images/loading.gif" class="loading" alt="loading" width="100"/>
+                <p>Ingrese texto de b&uacute;squeda</p>
+            </div>
+
+            <div class="content-result" id="content"></div>
         </div>
-    </div>
+        <div class="vote">
+            <div class="negative-vote" id="negative-vote"></div>
+            <div class="positive-vote" id="positive-vote"></div>
+        </div>
+    </section>
 
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
